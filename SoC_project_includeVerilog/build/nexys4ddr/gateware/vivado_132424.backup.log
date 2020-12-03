@@ -1,0 +1,639 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Dec  3 02:32:40 2020
+# Process ID: 132424
+# Current directory: /home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware
+# Command line: vivado -mode batch -source nexys4ddr.tcl
+# Log file: /home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/vivado.log
+# Journal file: /home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/vivado.jou
+#-----------------------------------------------------------
+source nexys4ddr.tcl
+# create_project -force -name nexys4ddr -part xc7a100t-CSG324-1
+# set_msg_config -id {Common 17-55} -new_severity {Warning}
+# read_verilog {/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/module/verilog/camara.v}
+# read_verilog {/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v}
+# read_verilog {/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v}
+# read_xdc nexys4ddr.xdc
+# set_property PROCESSING_ORDER EARLY [get_files nexys4ddr.xdc]
+# synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Command: synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 132474
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2097.082 ; gain = 0.000 ; free physical = 1346 ; free virtual = 6548
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'nexys4ddr' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+INFO: [Synth 8-3876] $readmem data file 'mem.init' is read successfully [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2371]
+INFO: [Synth 8-3876] $readmem data file 'mem_1.init' is read successfully [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2391]
+INFO: [Synth 8-3876] $readmem data file 'mem_2.init' is read successfully [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2411]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1829]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1837]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1872]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:1955]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2023]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2091]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2103]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2193]
+INFO: [Synth 8-6157] synthesizing module 'camara' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/module/verilog/camara.v:21]
+	Parameter AW bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'camara' (1#1) [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/module/verilog/camara.v:21]
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:62]
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_COUNTERS64 bound to: 1'b1 
+	Parameter ENABLE_REGS_16_31 bound to: 1'b1 
+	Parameter ENABLE_REGS_DUALPORT bound to: 1'b1 
+	Parameter LATCHED_MEM_RDATA bound to: 1'b0 
+	Parameter TWO_STAGE_SHIFT bound to: 1'b1 
+	Parameter BARREL_SHIFTER bound to: 1'b0 
+	Parameter TWO_CYCLE_COMPARE bound to: 1'b0 
+	Parameter TWO_CYCLE_ALU bound to: 1'b0 
+	Parameter COMPRESSED_ISA bound to: 1'b0 
+	Parameter CATCH_MISALIGN bound to: 1'b1 
+	Parameter CATCH_ILLINSN bound to: 1'b1 
+	Parameter ENABLE_PCPI bound to: 1'b0 
+	Parameter ENABLE_MUL bound to: 1'b1 
+	Parameter ENABLE_FAST_MUL bound to: 1'b0 
+	Parameter ENABLE_DIV bound to: 1'b1 
+	Parameter ENABLE_IRQ bound to: 1'b1 
+	Parameter ENABLE_IRQ_QREGS bound to: 1'b1 
+	Parameter ENABLE_IRQ_TIMER bound to: 1'b1 
+	Parameter ENABLE_TRACE bound to: 1'b0 
+	Parameter REGS_INIT_ZERO bound to: 1'b0 
+	Parameter MASKED_IRQ bound to: 0 - type: integer 
+	Parameter LATCHED_IRQ bound to: -1 - type: integer 
+	Parameter PROGADDR_RESET bound to: 0 - type: integer 
+	Parameter PROGADDR_IRQ bound to: 16 - type: integer 
+	Parameter STACKADDR bound to: -1 - type: integer 
+	Parameter irq_timer bound to: 0 - type: integer 
+	Parameter irq_ebreak bound to: 1 - type: integer 
+	Parameter irq_buserror bound to: 2 - type: integer 
+	Parameter irqregs_offset bound to: 32 - type: integer 
+	Parameter regfile_size bound to: 36 - type: integer 
+	Parameter regindex_bits bound to: 6 - type: integer 
+	Parameter WITH_PCPI bound to: 1'b1 
+	Parameter TRACE_BRANCH bound to: 36'b000100000000000000000000000000000000 
+	Parameter TRACE_ADDR bound to: 36'b001000000000000000000000000000000000 
+	Parameter TRACE_IRQ bound to: 36'b100000000000000000000000000000000000 
+	Parameter cpu_state_trap bound to: 8'b10000000 
+	Parameter cpu_state_fetch bound to: 8'b01000000 
+	Parameter cpu_state_ld_rs1 bound to: 8'b00100000 
+	Parameter cpu_state_ld_rs2 bound to: 8'b00010000 
+	Parameter cpu_state_exec bound to: 8'b00001000 
+	Parameter cpu_state_shift bound to: 8'b00000100 
+	Parameter cpu_state_stmem bound to: 8'b00000010 
+	Parameter cpu_state_ldmem bound to: 8'b00000001 
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_mul' [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2192]
+	Parameter STEPS_AT_ONCE bound to: 1 - type: integer 
+	Parameter CARRY_CHAIN bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2223]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_mul' (2#1) [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2192]
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_div' [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2415]
+INFO: [Synth 8-155] case statement is not full and has no default [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2440]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_div' (3#1) [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:2415]
+INFO: [Synth 8-155] case statement is not full and has no default [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:332]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:1264]
+INFO: [Synth 8-155] case statement is not full and has no default [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:1310]
+INFO: [Synth 8-155] case statement is not full and has no default [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:1493]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (4#1) [/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v:62]
+WARNING: [Synth 8-7071] port 'trace_valid' of module 'picorv32' is unconnected for instance 'picorv32' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2501]
+WARNING: [Synth 8-7071] port 'trace_data' of module 'picorv32' is unconnected for instance 'picorv32' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2501]
+WARNING: [Synth 8-7023] instance 'picorv32' of module 'picorv32' has 27 connections declared, but only 25 given [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:2501]
+INFO: [Synth 8-6155] done synthesizing module 'nexys4ddr' (5#1) [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2111.051 ; gain = 13.969 ; free physical = 1402 ; free virtual = 6608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2111.051 ; gain = 13.969 ; free physical = 1384 ; free virtual = 6614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2111.051 ; gain = 13.969 ; free physical = 1384 ; free virtual = 6614
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2111.051 ; gain = 0.000 ; free physical = 1363 ; free virtual = 6602
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:306]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of_objects [get_cells -hierarchical -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:306]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff1 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == C} -of_objects [get_cells -hierarchical -filter {ars_ff1 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff2 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of_objects [get_cells -hierarchical -filter {ars_ff2 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+Finished Parsing XDC File [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/nexys4ddr_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/nexys4ddr_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2250.895 ; gain = 0.000 ; free physical = 1312 ; free virtual = 6507
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2250.895 ; gain = 0.000 ; free physical = 1312 ; free virtual = 6507
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1398 ; free virtual = 6589
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1398 ; free virtual = 6589
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1391 ; free virtual = 6590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1378 ; free virtual = 6578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   63 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 3     
+	   2 Input   32 Bit       Adders := 15    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 1     
+	   3 Input    5 Bit       Adders := 16    
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 9     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 4     
+	               63 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 49    
+	               19 Bit    Registers := 2     
+	               15 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 19    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 150   
++---RAMs : 
+	            3600K Bit	(307200 X 12 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
+	              64K Bit	(2048 X 32 bit)          RAMs := 1     
+	               1K Bit	(36 X 32 bit)          RAMs := 1     
+	              160 Bit	(16 X 10 bit)          RAMs := 2     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 4     
+	   2 Input   63 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 51    
+	   5 Input   32 Bit        Muxes := 5     
+	  12 Input   32 Bit        Muxes := 4     
+	   9 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 7     
+	   6 Input   32 Bit        Muxes := 1     
+	   7 Input   32 Bit        Muxes := 1     
+	   4 Input   19 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 13    
+	   4 Input    7 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   9 Input    6 Bit        Muxes := 1     
+	  12 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   9 Input    5 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 4     
+	   9 Input    2 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 100   
+	   4 Input    1 Bit        Muxes := 19    
+	   9 Input    1 Bit        Muxes := 34    
+	   5 Input    1 Bit        Muxes := 2     
+	  12 Input    1 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP basesoc_p_r_adr_reg, operation Mode is: C'+A2*(B:0x280).
+DSP Report: register basesoc_v_count_reg is absorbed into DSP basesoc_p_r_adr_reg.
+DSP Report: register basesoc_h_count_reg is absorbed into DSP basesoc_p_r_adr_reg.
+DSP Report: register basesoc_p_r_adr_reg is absorbed into DSP basesoc_p_r_adr_reg.
+DSP Report: operator basesoc_p_r_adr0 is absorbed into DSP basesoc_p_r_adr_reg.
+DSP Report: operator basesoc_p_r_adr1 is absorbed into DSP basesoc_p_r_adr_reg.
+RAM Pipeline Warning: Read Address Register Found For RAM mem_3_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_3_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_2_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_2_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_3_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_2_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1353 ; free virtual = 6543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|nexys4ddr   | memdat_reg | 8192x32       | Block RAM      | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width)  | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|nexys4ddr   | mem_3_reg  | 300 K x 12(WRITE_FIRST) |   | R | 300 K x 12(WRITE_FIRST) | W | R | Port A and B     | 0      | 120    | 
+|nexys4ddr   | mem_1_reg  | 2 K x 32(WRITE_FIRST)   | W | R |                         |   |   | Port A           | 0      | 2      | 
+|nexys4ddr   | mem_2_reg  | 4 K x 32(WRITE_FIRST)   | W | R |                         |   |   | Port A           | 0      | 4      | 
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+---------------+-----------+----------------------+--------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++------------+---------------+-----------+----------------------+--------------+
+|picorv32    | cpuregs_reg   | Implied   | 64 x 32              | RAM64M x 22	 | 
+|nexys4ddr   | storage_reg   | Implied   | 16 x 8               | RAM32M x 2	  | 
+|nexys4ddr   | storage_1_reg | Implied   | 16 x 8               | RAM32M x 2	  | 
++------------+---------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|nexys4ddr   | C'+A2*(B:0x280) | 10     | 10     | 10     | -      | 19     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1194 ; free virtual = 6393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 2250.895 ; gain = 153.812 ; free physical = 1190 ; free virtual = 6389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width)  | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|nexys4ddr   | mem_3_reg  | 300 K x 12(WRITE_FIRST) |   | R | 300 K x 12(WRITE_FIRST) | W | R | Port A and B     | 0      | 120    | 
+|nexys4ddr   | mem_1_reg  | 2 K x 32(WRITE_FIRST)   | W | R |                         |   |   | Port A           | 0      | 2      | 
+|nexys4ddr   | mem_2_reg  | 4 K x 32(WRITE_FIRST)   | W | R |                         |   |   | Port A           | 0      | 4      | 
++------------+------------+-------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+---------------+-----------+----------------------+--------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++------------+---------------+-----------+----------------------+--------------+
+|picorv32    | cpuregs_reg   | Implied   | 64 x 32              | RAM64M x 22	 | 
+|nexys4ddr   | storage_reg   | Implied   | 16 x 8               | RAM32M x 2	  | 
+|nexys4ddr   | storage_1_reg | Implied   | 16 x 8               | RAM32M x 2	  | 
++------------+---------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_5_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_7_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance mem_3_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1184 ; free virtual = 6389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1164 ; free virtual = 6389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1164 ; free virtual = 6389
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in7_IBUF with 1st driver pin 'cam_data_in7_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in7_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[7]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in6_IBUF with 1st driver pin 'cam_data_in6_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in6_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[6]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in5_IBUF with 1st driver pin 'cam_data_in5_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in5_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[5]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in4_IBUF with 1st driver pin 'cam_data_in4_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in4_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[4]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in3_IBUF with 1st driver pin 'cam_data_in3_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in3_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[3]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in2_IBUF with 1st driver pin 'cam_data_in2_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in2_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[2]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in1_IBUF with 1st driver pin 'cam_data_in1_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in1_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[1]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in0_IBUF with 1st driver pin 'cam_data_in0_IBUF_inst/O' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:4]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cam_data_in0_IBUF with 2nd driver pin 'basesoc_mem_px_data_storage_reg[0]/Q' [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v:999]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1178 ; free virtual = 6399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1178 ; free virtual = 6399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1178 ; free virtual = 6399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1178 ; free virtual = 6399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   334|
+|3     |DSP48E1  |     1|
+|4     |LUT1     |   425|
+|5     |LUT2     |   377|
+|6     |LUT3     |   330|
+|7     |LUT4     |   935|
+|8     |LUT5     |   404|
+|9     |LUT6     |  1169|
+|10    |MUXF7    |    18|
+|11    |RAM32M   |     4|
+|12    |RAM64M   |    22|
+|13    |RAMB36E1 |   134|
+|25    |FDRE     |  2522|
+|26    |FDSE     |   120|
+|27    |IBUF     |    23|
+|28    |OBUF     |    48|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2284.918 ; gain = 187.836 ; free physical = 1178 ; free virtual = 6399
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 16 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 2284.918 ; gain = 47.992 ; free physical = 1236 ; free virtual = 6457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 2284.926 ; gain = 187.836 ; free physical = 1236 ; free virtual = 6457
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2284.926 ; gain = 0.000 ; free physical = 1308 ; free virtual = 6522
+INFO: [Netlist 29-17] Analyzing 513 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:306]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of_objects [get_cells -hierarchical -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:306]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff1 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == C} -of_objects [get_cells -hierarchical -filter {ars_ff1 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {ars_ff2 == TRUE}'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of_objects [get_cells -hierarchical -filter {ars_ff2 == TRUE}]'. [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc:308]
+Finished Parsing XDC File [/home/ferney/Documentos/wp06_SoC_includeVerilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2316.934 ; gain = 0.000 ; free physical = 1247 ; free virtual = 6468
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 26 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 22 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+142 Infos, 16 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 2316.934 ; gain = 219.945 ; free physical = 1402 ; free virtual = 6623
+# report_timing_summary -file nexys4ddr_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+# report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_synth.rpt
+# report_utilization -file nexys4ddr_utilization_synth.rpt
+# opt_design -directive default
+Command: opt_design -directive default
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: default
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in0_IBUF has multiple drivers: cam_data_in0_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in1_IBUF has multiple drivers: cam_data_in1_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[1]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in2_IBUF has multiple drivers: cam_data_in2_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[2]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in3_IBUF has multiple drivers: cam_data_in3_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in4_IBUF has multiple drivers: cam_data_in4_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[4]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in5_IBUF has multiple drivers: cam_data_in5_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in6_IBUF has multiple drivers: cam_data_in6_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net cam_data_in7_IBUF has multiple drivers: cam_data_in7_IBUF_inst/O, and basesoc_mem_px_data_storage_reg[7]/Q.
+INFO: [Project 1-461] DRC finished with 8 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2682.320 ; gain = 122.531 ; free physical = 1111 ; free virtual = 6318
+INFO: [Common 17-83] Releasing license: Implementation
+6 Infos, 0 Warnings, 0 Critical Warnings and 9 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+    while executing
+"opt_design -directive default"
+    (file "nexys4ddr.tcl" line 39)
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  3 02:33:57 2020...
