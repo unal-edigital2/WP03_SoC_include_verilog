@@ -1,21 +1,27 @@
 #include <generated/csr.h>
+#include <generated/soc.h>
 #include <irq.h>
 #include <uart.h>
 
-#include "camara.h"
-
-extern void periodic_isr(void);
-
 void isr(void);
+
+#ifdef CONFIG_CPU_HAS_INTERRUPT
+
 void isr(void)
 {
-	unsigned int irqs;
+	__attribute__((unused)) unsigned int irqs;
 
 	irqs = irq_pending() & irq_getmask();
-	leds_out_write(irqs);
+	
+#ifndef UART_POLLING
 	if(irqs & (1 << UART_INTERRUPT))
 		uart_isr();
-
-	if(irqs & (1 << CAMARA_CNTRL_INTERRUPT))
-		camara_isr();
+	
+#endif
 }
+
+#else
+
+void isr(void){};
+
+#endif

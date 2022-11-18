@@ -8,8 +8,13 @@
 #include <generated/csr.h>
 
 #include "delay.h"
-#include "display.h"
-#include "camara.h"
+
+#define INFRAROJO_1 1
+#define INFRAROJO_2 2
+#define INFRAROJO_3 4
+#define INFRAROJO_4 8
+
+
 
 static char *readstr(void)
 {
@@ -78,8 +83,7 @@ static void help(void)
 	puts("switch                          - switch test");
 	puts("display                         - display test");
 	puts("rgbled                          - rgb led test");
-	puts("vga                             - vga test");
-	puts("camara                             - camara test");
+	puts("infra                             - infra test");
 }
 
 static void reboot(void)
@@ -89,38 +93,44 @@ static void reboot(void)
 
 static void display_test(void)
 {
-/*	int i;
-	signed char defill = 0;	//1->left, -1->right, 0->.
-	
-	char txtToDisplay[40] = {0, DISPLAY_0, DISPLAY_1,DISPLAY_2,DISPLAY_3,DISPLAY_4,DISPLAY_5,DISPLAY_6,DISPLAY_7,DISPLAY_8,DISPLAY_9,DISPLAY_A,DISPLAY_B,DISPLAY_C,DISPLAY_D,DISPLAY_E,DISPLAY_F,DISPLAY_G,DISPLAY_H,DISPLAY_I,DISPLAY_J,DISPLAY_K,DISPLAY_L,DISPLAY_M,DISPLAY_N,DISPLAY_O,DISPLAY_P,DISPLAY_Q,DISPLAY_R,DISPLAY_S,DISPLAY_T,DISPLAY_U,DISPLAY_V,DISPLAY_W,DISPLAY_X,DISPLAY_Y,DISPLAY_Z,DISPLAY_DP,DISPLAY_TR,DISPLAY_UR};
-	
-	printf("Test del los display de 7 segmentos... se interrumpe con el botton 1\n");
-
-	while(!(buttons_in_read()&1)) {
-		display(txtToDisplay);
-		if(buttons_in_read()&(1<<1)) defill = ((defill<=-1) ? -1 : defill-1);
-		if(buttons_in_read()&(1<<2)) defill = ((defill>=1) ? 1 : defill+1);
-		if (defill > 0) {
-			char tmp = txtToDisplay[0];
-			for(i=0; i<sizeof(txtToDisplay)/sizeof(txtToDisplay[i]); i++) {
-				txtToDisplay[i] = ((i==sizeof(txtToDisplay)/sizeof(txtToDisplay[i])-1) ? tmp : txtToDisplay[i+1]);
-			}
-		}
-		else if(defill < 0) {
-			char tmp = txtToDisplay[sizeof(txtToDisplay)/sizeof(txtToDisplay[0])-1];
-			for(i=sizeof(txtToDisplay)/sizeof(txtToDisplay[i])-1; i>=0; i--) {
-				txtToDisplay[i] = ((i==0) ? tmp : txtToDisplay[i-1]);
-			}
-		}
-		delay_ms(500);
+	int i;
+	printf("display_test...\n");
+/*	for(i=0; i<6; i++) {
+		display_sel_write(i);
+		display_value_write(7);
+		display_write_write(1);
 	}
 */
 }
+static void GPIO_infra_test(void){
 
+	unsigned short valor_infrarrojos;
+
+	valor_infrarrojos=GPIO_infra_in_read();
+	printf("el valor de los infrarrojos es : %i \n", valor_infrarrojos);
+	if (valor_infrarrojos & INFRAROJO_1)
+		printf ("el infrarrojo 1 esta en ON\n");
+	else
+		printf ("el infrarrojo 1 esta en OFF\n");
+	if (valor_infrarrojos & INFRAROJO_2)
+		printf ("el infrarrojo 2 esta en ON\n");
+	else
+		printf ("el infrarrojo 2 esta en OFF\n");
+	if (valor_infrarrojos & INFRAROJO_3)
+		printf ("el infrarrojo 3 esta en ON\n");
+	else
+		printf ("el infrarrojo 3 esta en OFF\n");
+		if (valor_infrarrojos & INFRAROJO_4)
+		printf ("el infrarrojo 4 esta en ON\n");
+	else
+		printf ("el infrarrojo 4 esta en OFF\n");
+	
+
+}
 static void led_test(void)
 {
 	unsigned int i;
-	printf("Test del los leds... se interrumpe con el botton 1\n");
+//./l		printf("Test del los leds... se interrumpe con el botton 1\n");
 	while(!(buttons_in_read()&1)) {
 
 	for(i=1; i<65536; i=i*2) {
@@ -163,15 +173,7 @@ static void rgbled_test(void)
 	ledRGB_1_b_enable_write(1);
 
 	
-	ledRGB_2_r_period_write(T);
-	ledRGB_2_g_period_write(T);
-	ledRGB_2_b_period_write(T);
 	
-	
-	ledRGB_2_r_enable_write(1);
-	ledRGB_2_g_enable_write(1);
-	ledRGB_2_b_enable_write(1);
-
 	for (unsigned int j=0; j<100; j++){
 		ledRGB_1_g_width_write(j);
 		for (unsigned int i=0; i<100; i++){
@@ -181,11 +183,9 @@ static void rgbled_test(void)
 		}	
 	}
 	
-
-
 }
 
-
+/*
 static void vga_test(void)
 {
 	int x,y;
@@ -204,23 +204,7 @@ static void vga_test(void)
 		}
 	}
 }
-
-static void camara_test(void)
-{
-	unsigned short temp2 =0xFF;
-	printf("Test del los camara... se interrumpe con el botton 1\n");
-	while(!(buttons_in_read()&1)) {
-		unsigned short temp = camara_cntrl_mem_px_data_read();
-		if (temp2 != temp){
-			printf("el bus de la camara es : %i\n", temp);
-			printf("el boton de la camara esta en: %i\n",camara_cntrl_done_read());
-			printf("la habilitacion de la interrupción esta en : %i %i %i\n",camara_cntrl_ev_enable_read(), camara_cntrl_ev_status_read(), camara_cntrl_ev_pending_read());
-			camara_isr();
-			temp2 = temp;
-		}
-	}
-}
-
+*/
 static void console_service(void)
 {
 	char *str;
@@ -241,26 +225,41 @@ static void console_service(void)
 		display_test();
 	else if(strcmp(token, "rgbled") == 0)
 		rgbled_test();
-	else if(strcmp(token, "vga") == 0)
+	else if(strcmp(token, "infra") == 0)
+		GPIO_infra_test();
+/*	else if(strcmp(token, "vga") == 0)
 		vga_test();
-	else if(strcmp(token, "camara") == 0)
-		camara_test();
+*/
 	prompt();
 }
 
 int main(void)
 {
+	#ifdef CONFIG_CPU_HAS_INTERRUPT
 	irq_setmask(0);
 	irq_setie(1);
+	#endif
 	uart_init();
-	camara_init();
 
-	puts("\nSoC - RiscV project UNAL 2020-2-- CPU testing software  interrupt "__DATE__" "__TIME__"\n");
+	puts("\nVerilog SoC - RiscV project UNAL 2022-2"__DATE__" "__TIME__"\n");
 	help();
 	prompt();
+	GPIOverilog_cntrl_valor_led_write(1);
+	delay_ms(1000);
+	GPIOverilog_cntrl_valor_led_write(0);
+	delay_ms(1000);
+	int time=2000000;
+	PWM_enable_write(1);
+	PWM_period_write(time);
+	PWM_width_write(time/2);
 
 	while(1) {
 		console_service();
+	/*	leds_out_write(15);
+		delay_ms(100);
+		leds_out_write(240);
+		delay_ms(100);
+		printf("El programa \n");*/
 	}
 
 	return 0;

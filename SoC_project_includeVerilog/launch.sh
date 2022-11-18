@@ -4,9 +4,11 @@
 echo 'Load done'
 echo '================================'
 cd firmware
-make all
 make clean
+make all
 echo 'make done'
 echo '================================'
+echo 'pulse el boton reset del procesador para cargar el firmware'
+echo '================================'
 cd .. 
-litex_term.py /dev/ttyUSB1 --kernel firmware/firmware.bin
+litex_term /dev/ttyUSB0 --kernel firmware/firmware.bin
