@@ -4,6 +4,24 @@ from litex.build.xilinx import XilinxPlatform, VivadoProgrammer
 # IOs ----------------------------------------------------------------------------------------------
 
 _io = [
+       # infrarrojo
+    ("infrarrojo", 0, Pins("T14"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 1, Pins("T15"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 2, Pins("P14"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 3, Pins("R14"), IOStandard("LVCMOS33")),
+ 
+    # pwm
+    ("pwm__", 1, Pins("U14"), IOStandard("LVCMOS33")),
+
+    #GPIOVerilog
+    ("mod_pin_verilog", 1,
+        Subsignal("xclk", Pins("V17")),
+        Subsignal("salida_led", Pins("U17")),
+        Subsignal("bus_leds", Pins("V11 V12 V14 V15")),
+        Subsignal("bus_sw", Pins("V10 U11 U12 H6")),
+        IOStandard("LVCMOS33")),
+
+    
     ("led",  0, Pins("H17"), IOStandard("LVCMOS33")),
     ("led",  1, Pins("K15"), IOStandard("LVCMOS33")),
     ("led",  2, Pins("J13"), IOStandard("LVCMOS33")),

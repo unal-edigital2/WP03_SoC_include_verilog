@@ -6,8 +6,8 @@ from migen.genlib.cdc import MultiReg
 
 ## debe dejar solo una tarjeta
 # import tarjetas.digilent_nexys4 as tarjeta # si usa tarjeta nexy 4 
-# import tarjetas.nexys4ddr as tarjeta # si usa tarjeta nexy 4 4DRR
-import tarjetas.digilent_zybo_z7 as tarjeta # si usa tarjeta zybo z7
+import tarjetas.nexys4ddr as tarjeta # si usa tarjeta nexy 4 4DRR
+# import tarjetas.digilent_zybo_z7 as tarjeta # si usa tarjeta zybo z7
 # import tarjetas.c4e6e10 as tarjeta
 
 from litex.soc.integration.soc_core import *
@@ -43,7 +43,7 @@ class BaseSoC(SoCCore):
 			integrated_main_ram_size=20*1024)
 
 		# Clock Reset Generation
-		self.submodules.crg = CRG(platform.request("clk"), platform.request("cpu_reset"))
+		self.submodules.crg = CRG(platform.request("clk"), ~platform.request("cpu_reset"))
 
 		# Leds
 		SoCCore.add_csr(self,"leds")
@@ -55,7 +55,7 @@ class BaseSoC(SoCCore):
 		user_switchs = Cat(*[platform.request("sw", i) for i in range(4)])
 		self.submodules.switchs = gpio.GPIOIn(user_switchs)
 		
-		# Buttons  ("btnl", 0, Pins("P17"), IOStandard("LVCMOS33")),
+		# Buttons 
 
 		SoCCore.add_csr(self,"buttons")
 		user_buttons = Cat(*[platform.request("btn%c" %c) for c in ['c','d','u' ]])

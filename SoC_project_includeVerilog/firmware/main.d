@@ -2,7 +2,7 @@ main.o: main.c \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/tinystdio/stdio.h \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/inttypes.h \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/newlib.h \
- /home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/../libc/picolibc.h \
+ /home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/../libc/picolibc.h \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/sys/config.h \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/machine/ieeefp.h \
  /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/sys/features.h \
@@ -27,15 +27,15 @@ main.o: main.c \
  /opt/litex/litex/litex/soc/cores/cpu/vexriscv/irq.h \
  /opt/litex/litex/litex/soc/cores/cpu/vexriscv/system.h \
  /opt/litex/litex/litex/soc/cores/cpu/vexriscv/csr-defs.h \
- /home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/generated/soc.h \
- /home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/generated/csr.h \
+ /home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/generated/soc.h \
+ /home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/generated/csr.h \
  /opt/litex/litex/litex/soc/software/include/hw/common.h \
  /opt/litex/litex/litex/soc/software/libbase/uart.h \
  /opt/litex/litex/litex/soc/software/libbase/console.h delay.h
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/tinystdio/stdio.h:
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/inttypes.h:
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/newlib.h:
-/home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/../libc/picolibc.h:
+/home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/../libc/picolibc.h:
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/sys/config.h:
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/machine/ieeefp.h:
 /home/ferney/.local/lib/python3.8/site-packages/pythondata_software_picolibc/data/newlib/libc/include/sys/features.h:
@@ -60,8 +60,8 @@ main.o: main.c \
 /opt/litex/litex/litex/soc/cores/cpu/vexriscv/irq.h:
 /opt/litex/litex/litex/soc/cores/cpu/vexriscv/system.h:
 /opt/litex/litex/litex/soc/cores/cpu/vexriscv/csr-defs.h:
-/home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/generated/soc.h:
-/home/ferney/Documentos/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/software/include/generated/csr.h:
+/home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/generated/soc.h:
+/home/ferney/Documentos/WP03_SoC_include_verilog/SoC_project_includeVerilog/build/software/include/generated/csr.h:
 /opt/litex/litex/litex/soc/software/include/hw/common.h:
 /opt/litex/litex/litex/soc/software/libbase/uart.h:
 /opt/litex/litex/litex/soc/software/libbase/console.h:

@@ -93,7 +93,7 @@ static void reboot(void)
 
 static void display_test(void)
 {
-	int i;
+//	int i;
 	printf("display_test...\n");
 /*	for(i=0; i<6; i++) {
 		display_sel_write(i);
@@ -120,7 +120,7 @@ static void GPIO_infra_test(void){
 		printf ("el infrarrojo 3 esta en ON\n");
 	else
 		printf ("el infrarrojo 3 esta en OFF\n");
-		if (valor_infrarrojos & INFRAROJO_4)
+	if (valor_infrarrojos & INFRAROJO_4)
 		printf ("el infrarrojo 4 esta en ON\n");
 	else
 		printf ("el infrarrojo 4 esta en OFF\n");
@@ -248,13 +248,21 @@ int main(void)
 	delay_ms(1000);
 	GPIOverilog_cntrl_valor_led_write(0);
 	delay_ms(1000);
-	int time=2000000;
+	GPIOverilog_cntrl_valor_led_write(1);
+	delay_ms(1000);
+	int time=20000;
 	PWM_enable_write(1);
 	PWM_period_write(time);
 	PWM_width_write(time/2);
 
 	while(1) {
 		console_service();
+		// se le asigna dos les prendidos  y dos apagados al bus 
+		GPIOverilog_cntrl_bus_valor_leds_write(0xA);
+  		// se lee el bus de sw 
+		uint32_t valorsw= GPIOverilog_cntrl_bus_valor_sw_read();
+		printf("switch bus verilog: %i\n", valorsw);
+
 	/*	leds_out_write(15);
 		delay_ms(100);
 		leds_out_write(240);

@@ -22,8 +22,13 @@ module GPIOv (
 		input clk,
 		input rst,
 		output xclk,			// ejemplo de reloj de salida
-		output done,
-		input valor_led,			// ejemplo dato que llega al bloque
+		output done,			// usado para la interrupción
+		output [3:0] bus_leds,			// ejemplo de bus de salida 
+		input  [3:0] bus_valor_leds,	// ejemplo de bus de entrada 
+		input  [3:0] bus_sw,
+		output  [3:0] bus_valor_sw,
+		
+		input valor_led,				// ejemplo entrada 
 		output salida_led
 		/* incluir las señales necesarias*/
    );
@@ -42,8 +47,11 @@ HDL EJEMPLO  SE DEBE MODIFICAR
 		end
 	end
 	assign xclk = cfreq[25];
-	assign done = cfreq[25];;
 	assign salida_led =valor_led;
+	assign bus_leds=bus_valor_leds;
+	assign bus_valor_sw=bus_sw;
+//	assign bus_leds=bus_sw;
 
+	assign done = xclk;
 
 endmodule

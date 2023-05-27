@@ -16,6 +16,21 @@ _io = [
     ("clk",    0, Pins("E3"),  IOStandard("LVCMOS33")),
     ("cpu_reset", 0, Pins("C12"), IOStandard("LVCMOS33")),
 
+   # infrarrojo
+    ("infrarrojo", 0, Pins("T14"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 1, Pins("T15"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 2, Pins("P14"), IOStandard("LVCMOS33")),
+    ("infrarrojo", 3, Pins("R14"), IOStandard("LVCMOS33")),
+ 
+    # pwm
+    ("pwm__", 1, Pins("U14"), IOStandard("LVCMOS33")),
+
+    #GPIOVerilog
+    ("mod_pin_verilog", 1,
+        Subsignal("xclk", Pins("V9")),
+        Subsignal("salida_led", Pins("T8")),
+        IOStandard("LVCMOS33")),
+
     # Leds
     ("led",  0, Pins("T8"), IOStandard("LVCMOS33")),
     ("led",  1, Pins("V9"), IOStandard("LVCMOS33")),
